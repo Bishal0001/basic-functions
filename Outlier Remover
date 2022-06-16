@@ -1,0 +1,17 @@
+def outlier_remover(data):
+
+    ans = []
+    data_s = sorted(data)
+
+    q1,q3 = np.percentile(data_s,[25,75])
+    iqr = q1 - q3
+    upper_bound = q3 - (1.5*iqr)
+    lower_bound = q1 + (1.5*iqr)
+
+    for i in range(len(data)):
+        
+        if data[i] > lower_bound and data[i] < upper_bound:
+            ans.append(data[i]) 
+            
+
+    return ans
