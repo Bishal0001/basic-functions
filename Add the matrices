@@ -1,0 +1,20 @@
+    '''SOL : 1'''
+    
+    def solve(self, A, B):
+    
+        # a,b = np.array(A),np.array(B)
+        # return a+b
+        
+        for i in range(0,len(A)):
+            for j in range(0,len(A[0])):
+                A[i][j] += B[i][j]
+        return A
+        
+        
+        
+    '''SOL : 2'''
+        
+        
+     def solve(self, A, B):
+         a,b = np.array(A),np.array(B)
+         return a+b
