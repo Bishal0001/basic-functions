@@ -1,0 +1,12 @@
+def sort_rt(a,b):
+    d = {}
+    sorted_rt = []
+    followup_rt1=[]
+    
+    for i,j in zip(a,b):
+        d[i] = j
+    
+    for key, value in sorted(d.items()):
+        sorted_rt.append(key)
+        followup_rt1.append(value)
+    return (sorted_rt,followup_rt1)
