@@ -1,0 +1,10 @@
+def cond_prob(a):
+    Joint_vals_fitness = pd.crosstab(df['Usage'],df['Product'],normalize=True)
+    product = Joint_vals_fitness.sum(axis=0)
+    cond_Prob = Joint_vals_fitness.divide(product,axis=1)
+    cond_Prob.plot.bar(figsize=(15,6),grid=True,color={"black","m","grey"})
+    plt.title('Every probability in this table represents a conditional probability of product given Usage ie P( Product | Usage ).')
+    k = plt.show()
+    return k
+
+cond_prob(a)
